@@ -13,7 +13,8 @@ This package is available from SnapStore.
 
   
 # Post install configuration
-For security reasons, printing from SNAP is disabled by default. In order to have printing from WPS working you need to execute the folloging command:
+For security reasons, printing from SNAP is disabled by default. (See: https://ubuntu.com/blog/a-guide-to-snap-permissions-and-interfaces)
+In order to have printing from WPS working you need either to enable it from the SnapStore permissions or to execute the folloging command:
 ```
 sudo snap connect wps-2019-snap:cups-control :cups-control
 ```
@@ -22,11 +23,10 @@ sudo snap connect wps-2019-snap:cups-control :cups-control
 # How to rebuild this Snap package
 For credit reasons, I do not share the complete binaries of WPS here. Yet you can download the official package from http://linux.wps.com/ .
 
-1- Unzip the package in a folder and then unzip the data.tar.xz . Copy all the content of the data.tar.xz into the binaries/ folder of this repository.
-
-2- Then, copy the content of the extra_binaries_custom/ folder into the binaries/ folder and over-write the files that are in common in both folder.
-
-3- Then launch the snap building process ```snapcraft```
+To reproduce this Snap, you should
+  1. Unzip the package in a folder and then unzip the ```data.tar.xz```. Copy all the content of the ```data.tar.xz``` into the ```binaries/``` folder of this repository.
+  2. Then, copy the content of the ```extra_binaries_custom/``` folder into the ```binaries/``` folder and over-write the files that are in common in both folder.
+  3. Then launch the snap building process ```snapcraft```. Wait a bit. It is a big snap!
 
 
 # Credits

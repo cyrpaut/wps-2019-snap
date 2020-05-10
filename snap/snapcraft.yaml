@@ -14,7 +14,9 @@ description: |
   WPS to call home in China. Enjoy WPS securely !
   
   --POST INSTALL CONFIGURATION--
-  For security reasons, printing from SNAP is disabled by default. In order to have printing from WPS working you need to execute the folloging command
+  For security reasons, printing from SNAP is disabled by default. (see: https://ubuntu.com/blog/a-guide-to-snap-permissions-and-interfaces)
+  
+  In order to have printing from WPS working you need to either allow CUPS from the SnapStore permission or execute the folloging command
   # sudo snap connect wps-2019-snap:cups-control :cups-control
   
   --CREDITS--
