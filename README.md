@@ -34,8 +34,17 @@ Thanks to wachin for mui & translation : https://github.com/wachin/wps-office-al
 Thanks to galgalesh for his clear tutorial on GTK-2 integration for Snap : https://snapcraft.io/docs/gtk2-applications 
 
 
-# Known bugs
-* When you launch this snap from the command line ex. ```wps_2019-snap``` you see some warnings comming from the GTK-2 integration. It seems to have no effect on the program functionning. 
+# Issues & Known bugs
+
+**Issues still to be fixed**
+* After closing the program, it seems that it continues running in the background for a while. I think it is intentionnal from WPS developpers to keep it alive for faster reopening. I need to check.
+* Accessing to the skin center makes the program crash. The general settings seems not to be accessible.
+* Do not override the doc/docx icon of the file explorer with the WPS icon. The problem seems to be in the MIME, but the XML file is allright. I need to investigate this.
+* The embeded explorer of the welcome page do not show the icon corresponding to de program type. 
+
+**Intentional Behaviour**
+* When you launch this snap from the command line ex. ```wps-2019-snap.et``` you see some warnings comming from the GTK-2 integration. It seems to have no effect on the program. 
 * For personal use convenience, PDFs do not get automatically associated with WPS when installing WPS from this snap. It is on purpose, as I do not like the PDF reader so much. For me it is missing the very important "Save as" function which is important when reading a temporary PDF from the web. It is not a bug but was done intentionnally. I can easily revert that change if users don't like it.
-* Do not override the docx icon with the WPS icon. I need to investigate this
-* After closing the program, it seems that it continues running in the background for a while. I think it is intentionnal from WPS developpers to keep it alive for a while.
+* The opening page is not translated into local language. There is no available translation for this front page.
+* Accessing the WPS official website from the application results in a blank page. It is normal, internet plug is disables for privacy ^_^
+
