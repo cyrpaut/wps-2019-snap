@@ -36,3 +36,6 @@ Thanks to galgalesh for his clear tutorial on GTK-2 integration for Snap : https
 
 # Known bugs
 * When you launch this snap from the command line ex. ```wps_2019-snap``` you see some warnings comming from the GTK-2 integration. It seems to have no effect on the program functionning. 
+* For personal use convenience, PDFs do not get automatically associated with WPS when installing WPS from this snap. It is on purpose, as I do not like the PDF reader so much. For me it is missing the very important "Save as" function which is important when reading a temporary PDF from the web. It is not a bug but was done intentionnally. I can easily revert that change if users don't like it.
+* Do not override the docx icon with the WPS icon. I need to investigate this
+* After closing the program, it seems that it continues running in the background for a while. I think it is intentionnal from WPS developpers to keep it alive for a while.
