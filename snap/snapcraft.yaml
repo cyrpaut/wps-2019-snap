@@ -2,21 +2,21 @@ name: wps-2019-snap
 base: core18
 version: '11.2.0.9505'
 summary: WPS Office 2019 - All languages - No Internet
+icon: snap/gui/wpsoffice.svg
 description: |
   WPS Office is a light-weight office for Linux developped by the Kingsoft corporation
   This software is free to use, but under commercial licence.
   
   This version is an unofficial release of the 2019 version with all languages interface translation and spell-check dictionnary included. 
   
-  This version also includes common MS Fonts. By using this SNAP package, you accept all terms of use of the Microsoft End-User License Agreement ("EULA"): http://corefonts.sourceforge.net/eula.htm
+  This version also includes common MS Fonts. By using this Snap package, you accept all terms of use of the Microsoft End-User License Agreement ("EULA"): http://corefonts.sourceforge.net/eula.htm
   
-  To prevent leakeages of private data, the plug for internet is disabled, which prevents
-  WPS to call home in China. Enjoy WPS securely !
+  To prevent leakeages of private data, the plug for internet is disabled, which prevents WPS to call home in China. Enjoy WPS securely !
   
   --POST INSTALL CONFIGURATION--
   For security reasons, printing from SNAP is disabled by default. (see: https://ubuntu.com/blog/a-guide-to-snap-permissions-and-interfaces)
   
-  In order to have printing from WPS working you need to either allow CUPS from the SnapStore permission or execute the folloging command
+  In order to have printing from WPS working you need to either allow CUPS from the Snap-Store permission or execute the folloging command
   # sudo snap connect wps-2019-snap:cups-control :cups-control
   
   --CREDITS--
