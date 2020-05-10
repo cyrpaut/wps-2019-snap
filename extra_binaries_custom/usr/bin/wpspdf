@@ -1,0 +1,30 @@
+#!/bin/bash
+
+echo "Starting WPS-PDF"
+
+gBinPath=$(dirname "$0")
+if [ -d "${gBinPath}/office6" ]; then
+	gInstallPath=${gBinPath}
+else
+	gInstallPath=$SNAP/opt/kingsoft/wps-office  # CP Modified: correcting root
+fi
+
+gApp=wpspdf
+
+function run()
+{
+
+	if [ -e "${gInstallPath}/office6/${gApp}" ] ; then
+		{ ${gInstallPath}/office6/${gApp} "$@"; } >/dev/null 2>&1
+	else
+		echo "${gApp} does not exist!"
+	fi
+}
+
+function main()
+{
+	run "$@"
+	exit 0
+}
+
+main "$@"

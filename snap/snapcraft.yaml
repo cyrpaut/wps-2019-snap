@@ -1,0 +1,144 @@
+name: wps-2019-snap
+base: core18
+version: '11.2.0.9505'
+summary: WPS Office 2019 - All languages - No Internet
+description: |
+  WPS Office is a light-weight office for Linux developped by the Kingsoft corporation
+  This software is free to use, but under commercial licence.
+  
+  This version is an unofficial release of the 2019 version with all languages interface translation and spell-check dictionnary included. 
+  
+  This version also includes common MS Fonts. By using this SNAP package, you accept all terms of use of the Microsoft End-User License Agreement ("EULA"): http://corefonts.sourceforge.net/eula.htm
+  
+  To prevent leakeages of private data, the plug for internet is disabled, which prevents
+  WPS to call home in China. Enjoy WPS securely !
+  
+  --POST INSTALL CONFIGURATION--
+  For security reasons, printing from SNAP is disabled by default. In order to have printing from WPS working you need to execute the folloging command
+  # sudo snap connect wps-2019-snap:cups-control :cups-control
+  
+  --CREDITS--
+  Thanks to wachin for mui & translation : https://github.com/wachin/wps-office-all-mui-win-language
+
+architectures: 
+  - amd64
+
+grade: stable
+confinement: strict
+
+parts:
+  wps:
+    source: ./binaries/
+    plugin: dump
+    stage-packages: [libasound2, libatk1.0-0, libbz2-1.0, libcairo2, libcups2, libfontconfig1, libfreetype6, libgdk-pixbuf2.0-0, libglib2.0-0, libglu1-mesa, libgtk2.0-0, libltdl7, libnspr4, libnss3, libpango-1.0-0, libpangocairo-1.0-0, libpng16-16, libqt4-xml, libqt5gui5, libqt5network5, libqt5widgets5, libqt5xml5, libsm6, libxcb1, libxcb-shape0, libxcb-shm0, libxcb-xfixes0, libxcursor1, libxext6, libxi6, libxrandr2, libxrender1, libxss1, libxtst6, libxv1]
+    
+  desktop-gtk2:
+    source: https://github.com/ubuntu/snapcraft-desktop-helpers.git
+    source-subdir: gtk
+    plugin: make
+    make-parameters: ["FLAVOR=gtk2"]
+    build-packages:
+      - build-essential
+      - libgtk2.0-dev
+    stage-packages:
+      - libxkbcommon0  # XKB_CONFIG_ROOT
+      - ttf-ubuntu-font-family
+      - dmz-cursor-theme
+      - light-themes
+      - adwaita-icon-theme
+      - gnome-themes-standard
+      - shared-mime-info
+      - libgtk2.0-0
+      - libgdk-pixbuf2.0-0
+      - libglib2.0-bin
+      - libgtk2.0-bin
+      - unity-gtk2-module
+      - locales-all
+      - libappindicator1
+      - xdg-user-dirs
+      - ibus-gtk
+      - libibus-1.0-5
+      
+# Plugs for GTK2 desktop launch
+plugs:
+  gtk-2-engines:
+    interface: content
+    target: $SNAP/lib/gtk-2.0
+    default-provider: gtk2-common-themes
+  gtk-2-themes:
+    interface: content
+    target: $SNAP/data-dir/themes
+    default-provider: gtk-common-themes
+  icon-themes:
+    interface: content
+    target: $SNAP/data-dir/icons
+    default-provider: gtk-common-themes
+  sound-themes:
+    interface: content
+    target: $SNAP/data-dir/sounds
+    default-provider: gtk-common-themes
+
+apps:
+  wps:
+    command: desktop-launch $SNAP/usr/bin/wps
+    desktop: usr/share/applications/wps-office-wps.desktop
+    plugs:
+    - alsa
+    - cups-control
+    - desktop
+    - desktop-legacy
+    - home
+    - opengl
+    - pulseaudio
+    - removable-media
+    - wayland
+    - x11
+    - gsettings
+
+  wpp:
+    command: desktop-launch $SNAP/usr/bin/wpp
+    desktop: usr/share/applications/wps-office-wpp.desktop
+    plugs:
+    - alsa
+    - cups-control
+    - desktop
+    - desktop-legacy
+    - home
+    - opengl
+    - pulseaudio
+    - removable-media
+    - wayland
+    - x11
+    - gsettings
+    
+  et:
+    command: desktop-launch $SNAP/usr/bin/et
+    desktop: usr/share/applications/wps-office-et.desktop
+    plugs:
+    - alsa
+    - cups-control
+    - desktop
+    - desktop-legacy
+    - home
+    - opengl
+    - pulseaudio
+    - removable-media
+    - wayland
+    - x11
+    - gsettings
+    
+  pdf:
+    command: desktop-launch $SNAP/usr/bin/wpspdf
+    desktop: usr/share/applications/wps-office-pdf.desktop
+    plugs:
+    - alsa
+    - cups-control
+    - desktop
+    - desktop-legacy
+    - home
+    - opengl
+    - pulseaudio
+    - removable-media
+    - wayland
+    - x11
+    - gsettings

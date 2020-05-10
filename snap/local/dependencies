@@ -1,0 +1,80 @@
+
+libqt5gui5
+- libQt5Gui.so.5
+
+libqt5network5
+- libQt5Network.so.5
+
+libqt5widgets5
+- libQt5Widgets.so.5
+
+libqt5xml5
+- libQt5Xml.so.5
+
+libqt4-xml
+- libQtXml.so.4
+
+libxcursor1
+- libXcursor.so.1
+
+libxi6
+- libXi.so.6
+
+libxrandr2
+- libXrandr.so.2
+
+libxss1
+- libXss.so.1
+
+libxtst6
+- libXtst.so.6
+
+libxv1
+- libXv.so.1
+
+libasound2
+- libasound.so.2
+
+libatk1.0-0
+- libatk-1.0.so.0
+
+libcairo2
+- libcairo.so.2
+
+libgtk2.0-0
+- libgdk-x11-2.0.so.0
+
+libgdk-pixbuf2.0-0
+- libgdk_pixbuf-2.0.so.0
+
+libgtk2.0-0
+- libgtk-x11-2.0.so.0
+
+****************************
+- libjsapiservice.so
+
+libltdl7
+- libltdl.so.7
+
+libpango-1.0-0
+- libpango-1.0.so.0
+
+libpangocairo-1.0-0
+- libpangocairo-1.0.so.0
+
+
+libnspr4
+- libplds4.so
+- libplc4.so
+
+libnss3
+- libsmime3.so
+
+libxcb-shape0
+- libxcb-shape.so.0
+
+libxcb-shm0
+- libxcb-shm.so.0
+
+libxcb-xfixes0
+- libxcb-xfixes.so.0

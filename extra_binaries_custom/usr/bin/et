@@ -1,0 +1,60 @@
+#!/bin/bash
+
+echo "Starting WPS-ET"
+
+gOpt=
+#gOptExt=-multiply
+gTemplateExt=("ett" "xlt" "xltx" "xltm")
+gBinPath=$(dirname "$0")
+if [ -d "${gBinPath}/office6" ]; then
+	gInstallPath=${gBinPath}
+else
+	gInstallPath=$SNAP/opt/kingsoft/wps-office  # CP Modified: correcting root
+fi
+gApp=et
+gDaemon=0
+
+function parse_arg()
+{
+	if [ "$1" == "-quickstart" ]; then
+		gOpt=-quickstart
+		gDaemon=1
+		return 0
+	fi
+	if [ $# -eq 1 ] ; then
+		ext="${1##*.}"
+		if [ "" = "${ext}" ] ; then
+			return 0
+		fi
+
+		for i in "${gTemplateExt[@]}"
+		do
+			if [ "${ext}" = "${i}" ] ; then
+				gOpt=-t
+			fi
+		done
+	fi
+}
+
+function run()
+{
+	oldPwd="${PWD}"
+	if [ -e "${gInstallPath}/office6/${gApp}" ] ; then
+		if [ 1 -eq ${gDaemon} ]; then
+			nohup ${gInstallPath}/office6/${gApp} ${gOpt} > /dev/null 2>&1 &
+		else
+			{ ${gInstallPath}/office6/${gApp} ${gOptExt} ${gOpt} "$@"; } > /dev/null 2>&1
+		fi
+	else
+		echo "${gApp} does not exist!"
+	fi
+}
+
+function main()
+{
+	parse_arg "$@"
+	run "$@"
+	exit 0
+}
+
+main "$@"
