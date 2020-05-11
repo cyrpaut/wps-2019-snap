@@ -10,6 +10,7 @@ To prevent leakeages of private data, the plug for internet is disabled, which p
 
 # Availability
 This package is available from SnapStore.
+
 <a href="https://snapcraft.io/wps-2019-snap">
   <img alt="Get it from the Snap Store" src="https://snapcraft.io/static/images/badges/en/snap-store-white.svg" />
 </a>
