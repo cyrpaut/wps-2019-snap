@@ -33,6 +33,7 @@ To reproduce this Snap, you should
 
 # Credits
 Thanks to wachin for mui & translation : https://github.com/wachin/wps-office-all-mui-win-language
+
 Thanks to galgalesh for his clear tutorial on GTK-2 integration for Snap : https://snapcraft.io/docs/gtk2-applications 
 
 
@@ -49,4 +50,5 @@ Thanks to galgalesh for his clear tutorial on GTK-2 integration for Snap : https
 * For personal use convenience, PDFs do not get automatically associated with WPS when installing WPS from this snap. It is on purpose, as I do not like the PDF reader so much. For me it is missing the very important "Save as" function which is important when reading a temporary PDF from the web. It is not a bug but was done intentionnally. I can easily revert that change if users don't like it.
 * The opening page is not translated into local language. There is no available translation for this front page.
 * Accessing the WPS official website from the application results in a blank page. It is normal, internet plug is disables for privacy ^_^
+* This package does not allow to open file from temporary folder in memory. I may try to fix that.
 
