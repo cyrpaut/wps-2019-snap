@@ -15,12 +15,14 @@ This package is available from SnapStore.
 </a>
   
 # Post install configuration
-For security reasons, printing from SNAP is disabled by default. (See: https://ubuntu.com/blog/a-guide-to-snap-permissions-and-interfaces)
+For security reasons, printing and removable media from this Snap package are disabled by default. (See: https://ubuntu.com/blog/a-guide-to-snap-permissions-and-interfaces)
 In order to have printing from WPS working you need either to enable it from the SnapStore permissions or to execute the folloging command:
 ```
 sudo snap connect wps-2019-snap:cups-control :cups-control
+sudo snap connect wps-2019-snap:alsa :alsa
+sudo snap connect wps-2019-snap:pulseaudio :pulseaudio
+sudo snap connect wps-2019-snap:removable-media :removable-media
 ```
-
 
 # How to rebuild this Snap package
 For credit reasons, I do not share the complete binaries of WPS here. Yet you can download the official package from http://linux.wps.com/ .
