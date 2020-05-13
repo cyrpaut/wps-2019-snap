@@ -38,6 +38,8 @@ To reproduce this Snap, you should
 # Credits
 Thanks to wachin for mui & translation : https://github.com/wachin/wps-office-all-mui-win-language
 
+Thanks to andreaspreuss for German mui translation: https://github.com/andreaspreuss/firejail
+
 Thanks to galgalesh for his clear tutorial on GTK-2 integration for Snap : https://snapcraft.io/docs/gtk2-applications 
 
 
