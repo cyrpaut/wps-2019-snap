@@ -1,0 +1,20 @@
+[Desktop Entry]
+Comment=Kingsoft Pdf Reader
+Comment[zh_CN]=WPS PDF阅读器
+Exec=usr/bin/wpspdf %F
+GenericName=Kingsoft Pdf Reader
+GenericName[zh_CN]=WPS PDF
+MimeType=application/wps-office.pdf;application/pdf
+Name=WPS PDF
+Name[zh_CN]=WPS PDF
+StartupNotify=false
+Terminal=false
+Type=Application
+Categories=Office;WordProcessor;Qt;
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
+Icon=usr/share/icons/hicolor/512x512/mimetypes/wps-office2019-pdfmain.png
+InitialPreference=3
+StartupWMClass=wpspdf
