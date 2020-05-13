@@ -49,7 +49,6 @@ Thanks to galgalesh for his clear tutorial on GTK-2 integration for Snap : https
 * After closing the program, it seems that it continues running in the background for a while. I think it is intentionnal from WPS developpers to keep it alive for faster reopening. I need to check.
 * Accessing to the skin center makes the program crash. The general settings seems not to be accessible.
 * Do not override the doc/docx icon of the file explorer with the WPS icon. The problem seems to be in the MIME, but the XML file is allright. I need to investigate this.
-* The embeded explorer of the welcome page do not show the icon corresponding to the document type. 
 
 **Issues I would like to fix bu It can't**
 * This package does not allow to open file from temporary folder /tmp in memory. It seems this is not possible for Snap to share /tmp with host as it is seen as a security loophole by snap developper. Yet it is usefull for temporary opening of a document from Thunderbird/Firefox...
