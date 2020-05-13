@@ -49,12 +49,15 @@ Thanks to galgalesh for his clear tutorial on GTK-2 integration for Snap : https
 * After closing the program, it seems that it continues running in the background for a while. I think it is intentionnal from WPS developpers to keep it alive for faster reopening. I need to check.
 * Accessing to the skin center makes the program crash. The general settings seems not to be accessible.
 * Do not override the doc/docx icon of the file explorer with the WPS icon. The problem seems to be in the MIME, but the XML file is allright. I need to investigate this.
-* The embeded explorer of the welcome page do not show the icon corresponding to de program type. 
+* The embeded explorer of the welcome page do not show the icon corresponding to the document type. 
+
+**Issues I would like to fix bu It can't**
+* This package does not allow to open file from temporary folder /tmp in memory. It seems this is not possible for Snap to share /tmp with host as it is seen as a security loophole by snap developper. Yet it is usefull for temporary opening of a document from Thunderbird/Firefox...
+* Similarly, the multi-tab opening from file explorer does not work. If you have WPS open and click on file from file explorer, it will open a new WPS windows and not a new tab. Experimenting with firejail, it seems this behavior comes from /tmp containment. I cannot fix it unforunately...
+
 
 **Intentional Behaviour**
 * When you launch this snap from the command line ex. ```wps-2019-snap.et``` you see some warnings comming from the GTK-2 integration. It seems to have no effect on the program. 
 * For personal use convenience, PDFs do not get automatically associated with WPS when installing WPS from this snap. It is on purpose, as I do not like the PDF reader so much. For me it is missing the very important "Save as" function which is important when reading a temporary PDF from the web. It is not a bug but was done intentionnally. I can easily revert that change if users don't like it.
 * The opening page is not translated into local language. There is no available translation for this front page.
-* Accessing the WPS official website from the application results in a blank page. It is normal, internet plug is disables for privacy ^_^
-* This package does not allow to open file from temporary folder in memory. I may try to fix that.
-
+* Accessing the WPS official website from the application results in a blank page. It is normal, internet plug is disabled for privacy. ^_^
