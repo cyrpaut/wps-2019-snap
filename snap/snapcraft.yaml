@@ -1,6 +1,6 @@
 name: wps-2019-snap
 base: core18
-version: '11.2.0.9505'
+version: '11.2.0.9125'
 summary: WPS Office 2019 - All languages - No Internet
 icon: snap/gui/wpsoffice.svg
 description: |

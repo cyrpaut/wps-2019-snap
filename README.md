@@ -7,6 +7,8 @@ This repository share the sources for SNAP packaging of an unofficial WPS 2019 r
   
 To prevent leakeages of private data, the plug for internet is disabled, which prevents WPS to call home in China. Enjoy WPS securely !
 
+PS: I revert back to 9125 version of WPS office, because of annoying bug of copy/paste in the latest 9505 version which makes it impossible to use in production.
+
 
 # Availability
 This package is available from SnapStore.
